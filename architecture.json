@@ -1,0 +1,37 @@
+{
+    "language": "Python",
+    "dependency_file": "requirements.txt",
+    "dependencies": [],
+    "files": [
+        {
+            "path": "src/cosmic_constants_validator.py",
+            "description": "Main validation logic for cosmic constants",
+            "exports": ["validate_universe_constants(dict)"]
+        },
+        {
+            "path": "src/constants.py",
+            "description": "Defines default physical constants and thresholds",
+            "exports": ["DEFAULT_CONSTANTS", "LIFE_SUSTAINING_THRESHOLDS"]
+        },
+        {
+            "path": "src/analysis.py",
+            "description": "Performs deviation scoring and life-support analysis",
+            "exports": ["calculate_deviation_score(dict, dict)", "analyze_life_sustainability(dict)"]
+        },
+        {
+            "path": "src/main.py",
+            "description": "Entry point for command-line usage",
+            "imports_from_other_files": ["cosmic_constants_validator.py", "constants.py"]
+        },
+        {
+            "path": "src/visualization.py",
+            "description": "Provides visualization tools for constant comparisons",
+            "exports": ["plot_constant_comparison(dict, dict)"]
+        },
+        {
+            "path": "requirements.txt",
+            "description": "Lists project dependencies",
+            "exports": []
+        }
+    ]
+}
